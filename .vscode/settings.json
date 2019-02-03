@@ -1,0 +1,16 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+  "azureFunctions.projectRuntime": "~2",
+  "azureFunctions.projectLanguage": "JavaScript",
+  "azureFunctions.templateFilter": "Verified",
+  "azureFunctions.deploySubpath": ".",
+  "azureFunctions.preDeployTask": "installExtensions",
+  "files.exclude": {
+    "obj": true,
+		"bin": true,
+		"**/*.js.map": { "when": "$(basename)"},
+		"**/*.js": { "when": "$(basename).ts"}
+  },
+  "debug.internalConsoleOptions": "neverOpen"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "address-autocomplete-service",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@azure/functions": "^1.0.1-beta2",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "@types/node-fetch": "^2.1.4",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4",
+    "typescript-tslint-plugin": "^0.2.1"
+  },
+  "scripts": {
+    "lint": "tslint --project .",
+    "build": "tsc -p .",
+    "build.watch": "tsc --watch -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonmika/address-autocomplete-service.git"
+  },
+  "author": "Simon Mika <simon@mika.se>",
+  "bugs": {
+    "url": "https://github.com/simonmika/address-autocomplete-service/issues"
+  },
+  "homepage": "https://github.com/simonmika/address-autocomplete-service#readme"
+}
