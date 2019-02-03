@@ -12,6 +12,7 @@ export default async function(context: azure.Context, req: azure.HttpRequest) {
 		const response = await fetch(`https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${input}&types=address&language=sv&key=${process.env.GooglePlacesApiKey}`)
 		context.res = {
 			status: response.status,
+			headers: { "content-type": "application/json" },
 			body: (await response.json() as model.GooglePlaces.PredictionResponse).predictions.map(prediction =>
 				prediction.terms.length == 3 ? { street: prediction.terms[0].value, town: prediction.terms[1].value, country: prediction.terms[2].value } :
 				prediction.terms.length == 4 ? { street: `${prediction.terms[0].value} ${prediction.terms[1].value}`, town: prediction.terms[2].value, country: prediction.terms[3].value } :
